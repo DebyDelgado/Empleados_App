@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="row">
+
+    <div class="col">
+      <div>
+
+        {{indice+1}}:{{empleadoI.nombre}} {{empleadoI.apellido}} {{empleadoI.cargo}} {{empleadoI.salario}}
+
+      </div>
+
+      <app-caract-empleado (caractEmpleados)="addcaract($event)"></app-caract-empleado>
+
+      <ul style="list-style: none;">
+          <li *ngFor="let caract of arrayCaract">{{caract}}</li>
+      </ul>
+    </div>
+  </div>
+
+</div>

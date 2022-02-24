@@ -3,17 +3,24 @@
 
     <div class="col">
       <div>
-
         {{indice+1}}:{{empleadoI.nombre}} {{empleadoI.apellido}} {{empleadoI.cargo}} {{empleadoI.salario}}
-
+      <a [routerLink]="['/update', indice]"[queryParams]="{action:'1'}">
+        Actualizar 
+      </a>
+      &nbsp;
+      <a [routerLink]="['/update', indice]"[queryParams]="{action:'2'}">
+        Eliminar 
+      </a>
       </div>
 
-      <app-caract-empleado (caractEmpleados)="addcaract($event)"></app-caract-empleado>
+      <app-caract-empleado (caractEmpleados)="addCaract($event)"></app-caract-empleado>
 
       <ul style="list-style: none;">
           <li *ngFor="let caract of arrayCaract">{{caract}}</li>
       </ul>
     </div>
   </div>
-
+  
 </div>
+
+

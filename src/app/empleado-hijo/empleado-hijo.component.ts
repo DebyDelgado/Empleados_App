@@ -14,7 +14,7 @@ export class EmpleadoHijoComponent implements OnInit {
 
   arrayCaract=['']
 
-    addcaract(newCaract:string){
+    addCaract(newCaract:string){
       this.arrayCaract.push(newCaract);
 
     }
